@@ -65,6 +65,17 @@ namespace EventForYou
                     return;
                 }
             }
+            foreach (var item in agents)
+            {
+                foreach (var item2 in agents2)
+                {
+                    if (Password.Password != item2.Password && Login.Text != item2.Login || Password.Password != item.Password && Login.Text != item.Login)
+                    {
+                        MessageBox.Show("Такого пользователя не существует");
+                        return;
+                    }
+                }
+            }
         }
         private void Registration(object sender, RoutedEventArgs e)
         {
