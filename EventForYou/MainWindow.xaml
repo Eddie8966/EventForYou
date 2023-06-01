@@ -1,0 +1,62 @@
+﻿<Window x:Class="EventForYou.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventForYou"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+           Title="MainWindow" Height="1080" Width="1440">
+    <Window.Background>
+        <ImageBrush ImageSource="/image/Background.png"/>
+    </Window.Background>
+
+    <Viewbox>
+        <Border Width="1440" Height="1080">
+            <Grid>
+                <Rectangle HorizontalAlignment="Center" Height="815" VerticalAlignment="Center" Width="469" Fill="White" />
+                <Image Source="/image/LogoLogin.png" Margin="633,176,633,749" Height="139" Width="174"/>
+                <PasswordBox Name="Password" HorizontalAlignment="Left" Margin="594,479,0,0" VerticalAlignment="Top" Width="306" FontSize="20" Height="44" BorderThickness="1,1,1,1" ClipToBounds="True" Padding="2,0,2,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <PasswordBox.Resources>
+                        <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                        <Border CornerRadius="22" BorderThickness="2" BorderBrush="black">
+                                            <ScrollViewer x:Name="PART_ContentHost"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </PasswordBox.Resources>
+                </PasswordBox>
+                <TextBox Name="Login" HorizontalAlignment="Left" Margin="594,392,0,0" VerticalAlignment="Top" Width="306" Height="44" BorderBrush="Black" BorderThickness="2,2,2,2" VerticalContentAlignment="Center" FontSize="20" TextAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="22"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBlock HorizontalAlignment="Left" Margin="611,364,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" IsEnabled="False" FontSize="20"/>
+                <Image Source="/image/IconLogin.png" Margin="554,396,852,648" Height="36" Width="33"/>
+                <Image Source="/image/OrganizationName.png" Margin="219,14,677,818" Height="232" Width="544"/>
+                <TextBlock HorizontalAlignment="Left" Margin="611,451,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" IsEnabled="False" FontSize="20"/>
+                <Image Source="/image/IconPassword.png" Margin="554,475,854,553" Height="36" Width="33"/>
+                <Button Content="Button" HorizontalAlignment="Left" Margin="550,558,0,0" VerticalAlignment="Top" Background="#FFFFE5FC" Width="355" Height="50" BorderBrush="Black" Click="Category">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Grid>
+                                <Rectangle RadiusX="22" RadiusY="22" StrokeThickness="2" Fill="#FFE5FC"/>
+                                <TextBlock Text ="LOGIN" FontSize="20" TextAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock HorizontalAlignment="Left" Margin="659,848,0,0" TextWrapping="Wrap" Text="Or Sign Up Using" VerticalAlignment="Top" Width="122" Height="18" FontSize="15" Foreground="#FF9A9A9A"/>
+                <Button Content="SIGN UP" HorizontalAlignment="Left" Margin="689,866,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="15" FontWeight="Bold" Foreground="#FF9A9A9A" BorderBrush="{x:Null}" Click="Registration"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>
+

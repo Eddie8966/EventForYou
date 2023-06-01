@@ -1,0 +1,45 @@
+﻿<Window x:Class="EventForYou.User.CabinetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventForYou.User"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="CabinetWindow" Height="1080" Width="1440">
+    <Grid>
+        <Viewbox>
+            <Border Width="1440" Height="1080">
+                <Grid RenderTransformOrigin="0.514,0.502" Margin="0,10,0,-10">
+                    <Rectangle HorizontalAlignment="Center" Height="3" VerticalAlignment="Top" Width="420" Fill="#000000" Stretch="UniformToFill" Margin="488,374,532,0"/>
+                    <Rectangle HorizontalAlignment="Center" Height="3" VerticalAlignment="Top" Width="420" Fill="#000000" Stretch="UniformToFill" Margin="488,540,532,0"/>
+                    <Rectangle HorizontalAlignment="Center" Height="3" VerticalAlignment="Top" Width="420" Fill="#000000" Stretch="UniformToFill" Margin="488,706,532,0"/>
+                    <Rectangle HorizontalAlignment="Center" Height="3" VerticalAlignment="Top" Width="420" Fill="#000000" Stretch="UniformToFill" Margin="933,374,87,0"/>
+                    <Rectangle HorizontalAlignment="Center" Height="3" VerticalAlignment="Top" Width="420" Fill="#000000" Stretch="UniformToFill" Margin="933,540,87,0"/>
+                    <Rectangle HorizontalAlignment="Center" Height="92" VerticalAlignment="Top" Width="1440" Fill="#FFCEC6FF" Stretch="UniformToFill"/>
+                    <Button Content="Главная" HorizontalAlignment="Left" Margin="166,22,0,0" VerticalAlignment="Top" Height="50" Width="128" FontSize="32" Foreground="#FF767676" Background="{x:Null}" BorderBrush="#FFCEC6FF" IsCancel="True" Click="Category"/>
+                    <Button Content="Личный кабинет" HorizontalAlignment="Left" Margin="351,22,0,0" VerticalAlignment="Top" Height="50" Width="254" FontSize="32" Foreground="#FF767676"  Background="{x:Null}" BorderBrush="#FFCEC6FF" IsCancel="True"/>
+                    <Button Content="Заказы" HorizontalAlignment="Left" Margin="666,22,0,0" VerticalAlignment="Top" Height="50" Width="128" FontSize="32" Foreground="#FF767676" Background="{x:Null}" BorderBrush="#FFCEC6FF" IsCancel="True" Click="Order"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="488,321,0,0" TextWrapping="Wrap" Text="FIO:" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36" RenderTransformOrigin="0.514,0.22" RenderOptions.BitmapScalingMode="Fant" Width="420"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="933,321,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36" RenderTransformOrigin="0.514,0.22" Width="420"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="933,487,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36" RenderTransformOrigin="0.514,0.22" Width="420"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="488,487,0, 0" TextWrapping="Wrap" Text="Phone:" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36" RenderTransformOrigin="0.514,0.22" Width="420"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="488,653,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="36" RenderTransformOrigin="0.514,0.22" Width="420"/>
+                    <Image Source="/image/LogoCabinet.png" Margin="102,374,1034,374" />
+                    <Button Width="354" Height="50" Content="Редактировать данные" FontSize="20" HorizontalAlignment="Left" Margin="998,924,87,96" VerticalAlignment="Top" Background="#FFFFE5FC" Foreground="#767676" BorderBrush="White" Click="Redact">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBox IsReadOnly="True" Name="FIO" HorizontalAlignment="Left" Margin="551,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Height="48"  Foreground="Black" BorderBrush="{x:Null}" FontSize="22"  VerticalContentAlignment="Center"/>
+                    <TextBox IsReadOnly="True" Name="Phone" HorizontalAlignment="Left" Margin="596,492,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312" Height="48"  Foreground="Black" BorderBrush="{x:Null}" FontSize="22"  VerticalContentAlignment="Center"/>
+                    <TextBox IsReadOnly="True" Name="Email" HorizontalAlignment="Left" Margin="596,658,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="312" Height="48"  Foreground="Black" BorderBrush="{x:Null}" FontSize="22"  VerticalContentAlignment="Center"/>
+                    <TextBox IsReadOnly="True" Name="Password" HorizontalAlignment="Left" Margin="1089,492,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Height="48"  Foreground="Black" BorderBrush="{x:Null}" FontSize="22"  VerticalContentAlignment="Center"/>
+                    <TextBox IsReadOnly="True" Name="Login" HorizontalAlignment="Left" Margin="1029,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="324" Height="48"  Foreground="Black" BorderBrush="{x:Null}" FontSize="22"  VerticalContentAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Viewbox>
+    </Grid>
+</Window>

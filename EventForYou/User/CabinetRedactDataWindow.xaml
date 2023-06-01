@@ -1,0 +1,81 @@
+﻿<Window x:Class="EventForYou.User.CabinetRedactDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventForYou.User"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+ Title="CabinetRedactDataWindow" Height="1080" Width="1440">
+    <Grid>
+        <Viewbox>
+            <Border Width="1440" Height="1080">
+                <Grid RenderTransformOrigin="0.514,0.502" Margin="0,10,0,-10">
+                    <Rectangle HorizontalAlignment="Center" Height="92" VerticalAlignment="Top" Width="1440" Fill="#FFCEC6FF" Stretch="UniformToFill"/>
+                    <TextBox Name="FIO" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="592,496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="44" BorderThickness="2,2,2,2" BorderBrush="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <Image Source="/image/IconLogin.png" Width="36" Height="36" Margin="542,498,862,546"/>
+                    <TextBox Name="Login" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="592,576,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="44" BorderThickness="2,2,2,2" BorderBrush="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <PasswordBox Name="Password" HorizontalContentAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="592,655,0,0" VerticalAlignment="Top" Width="304" Height="44">
+                        <PasswordBox.Resources>
+                            <Style x:Key="{x:Type PasswordBox}" TargetType="{x:Type PasswordBox}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                            <Border CornerRadius="22" BorderThickness="2" BorderBrush="Black">
+                                                <ScrollViewer x:Name="PART_ContentHost"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </PasswordBox.Resources>
+                    </PasswordBox>
+                    <TextBox Name="Phone" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="592,734,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="44" BorderThickness="2,2,2,2" BorderBrush="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <TextBox Name="Email" TextAlignment="Center" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="592,814,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" Height="44" BorderThickness="2,2,2,2" BorderBrush="Black">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <TextBlock HorizontalAlignment="Left" Margin="621,467,0,0" TextWrapping="Wrap" Text="FIO" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" RenderTransformOrigin="0.514,0.22" RenderOptions.BitmapScalingMode="Fant"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="621,547,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" RenderTransformOrigin="0.514,0.22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="621,626,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" RenderTransformOrigin="0.514,0.22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="621,705,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" RenderTransformOrigin="0.514,0.22"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="621,784,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="20" RenderTransformOrigin="0.514,0.22"/>
+                    <Image Source="/image/IconLogin.png" Width="36" Height="36" Margin="542,582,862,462"/>
+                    <Image Source="/image/IconPassword.png" Width="36" Height="36" Margin="542,659,862,385"/>
+                    <Image Source="/image/IconPhone.png" Width="36" Height="36" Margin="542,746,862,298"/>
+                    <Image Source="/image/IconMail.png" Width="36" Height="36" Margin="542,825,862,219"/>
+                    <Image Source="/image/LogoCabinet.png" Margin="568,135,568,613" />
+                    <Button Width="354" Height="50" Content="Сохранить" FontSize="20" HorizontalAlignment="Left" Margin="542,892,0,0" VerticalAlignment="Top" Background="#FFFFE5FC" Foreground="#FF767676" BorderBrush="White" Click="Save">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="22"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Left" Margin="166,28,0,0" TextWrapping="Wrap" Text="Редактирование данных" VerticalAlignment="Top" FontSize="32" Foreground="#FF767676" />
+                </Grid>
+            </Border>
+        </Viewbox>
+    </Grid>
+</Window>
