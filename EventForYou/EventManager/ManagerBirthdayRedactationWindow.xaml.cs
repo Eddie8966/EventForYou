@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,10 @@ namespace EventForYou.Event_Manager
         {
             InitializeComponent();
         }
+        //Данный метод отвечает за закрытие окна редактирования
         private void CLW(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("Окно должно закрыться");
             this.Close();
         }
     }

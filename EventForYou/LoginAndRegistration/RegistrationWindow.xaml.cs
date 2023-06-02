@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -28,6 +30,8 @@ namespace EventForYou.LoginAndRegistration
         }
         private void Register(object sender, RoutedEventArgs e)
         {
+            Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkaregistr.txt", FileMode.OpenOrCreate)));
+            Trace.AutoFlush = true;
             Entities entity = new Entities();
             User_registration reg = new User_registration();
             List<User_registration> registr = entity.User_registration.ToList();
@@ -79,6 +83,13 @@ namespace EventForYou.LoginAndRegistration
                 entity.User_registration.Add(reg);
                 entity.SaveChanges();
                 entity.Dispose();
+                Trace.WriteLine("-------------------------------");
+                Trace.WriteLine(FIO.Text);
+                Trace.WriteLine(Phone.Text);
+                Trace.WriteLine(Email.Text);
+                Trace.WriteLine(Login.Text);
+                Trace.WriteLine(Password.Password);
+                Trace.WriteLine("-------------------------------");
                 MainWindow window = new MainWindow();
                 window.Show();
                 this.Close();

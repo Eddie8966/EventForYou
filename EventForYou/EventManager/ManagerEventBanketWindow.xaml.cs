@@ -23,18 +23,21 @@ namespace EventForYou.Event_Manager
         {
             InitializeComponent();
         }
+        //Данный метод отвечает за переход в обратное окно категорий мероприятий
         private void ManagerCategory(object sender, RoutedEventArgs e)
         {
             ManagerCategoryWindow window = new ManagerCategoryWindow();
             window.Show();
             this.Close();
         }
+        //Данный метод отвечает за открытие окна заказов
         private void OrderManager(object sender, RoutedEventArgs e)
         {
             ManagerOrderWindow window = new ManagerOrderWindow();
             window.Show();
             this.Close();
         }
+        //Данный метод отвечает за открытие окна свадьбы, где менеджер может провести редактирования
         private void OrderW(object sender, RoutedEventArgs e)
         {
             ManagerOrderWeddingWindow window = new ManagerOrderWeddingWindow();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,29 +24,40 @@ namespace EventForYou.Event_Manager
         {
             InitializeComponent();
         }
+        //Данный метод отвечает за открытие окна заказов, которые может просматривать менеджер
         private void OrderManager(object sender, RoutedEventArgs e)
         {
             ManagerOrderWindow window = new ManagerOrderWindow();
+            Debug.WriteLine("Был создан метод для перехода в новое окно");
             window.Show();
-            
+            Debug.WriteLine("Открылось новое окно");
             this.Close();
         }
+        //Данный метод отвечает за открытие окна банкетов, в котором менеджер может выбрать мероприятие
         private void EventBManager(object sender, RoutedEventArgs e)
         {
             ManagerEventBanketWindow window = new ManagerEventBanketWindow();
+            Debug.WriteLine("Был создан метод для перехода в новое окно");
             window.Show();
+            Debug.WriteLine("Открылось новое окно");
             this.Close();
         }
+        //Данный метод отвечает за открытие окна культурных мероприятий, в котором менеджер может выбрать мероприятие
         private void EventPManager(object sender, RoutedEventArgs e)
         {
             ManagerEventCultureWindow window = new ManagerEventCultureWindow();
+            Debug.WriteLine("Был создан метод для перехода в новое окно");
             window.Show();
+            Debug.WriteLine("Открылось новое окно");
             this.Close();
         }
+        //Данный метод отвечает за открытие окна развлекательных мероприятий, в котором менеджер может выбрать мероприятие
         private void EventHManager(object sender, RoutedEventArgs e)
         {
             ManagerEventFunnyWindow window = new ManagerEventFunnyWindow();
+            Debug.WriteLine("Был создан метод для перехода в новое окно");
             window.Show();
+            Debug.WriteLine("Открылось новое окно");
             this.Close();
         }
     }

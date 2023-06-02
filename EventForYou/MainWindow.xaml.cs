@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,12 +27,17 @@ namespace EventForYou
         {
             InitializeComponent();
         }
+        //В данном методе присутсвует проверка, которая определяет является ли аккаунт пользовательским или же это Event-менеджер
         private void Category(object sender, RoutedEventArgs e)
         {
             Entities entities = new Entities();
             List<Users> agents = entities.Users.ToList();
-
-
+            Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkaregistr.txt", FileMode.OpenOrCreate)));
+            Trace.AutoFlush = true;
+            Trace.WriteLine("-------------------------------");
+            Trace.WriteLine(Login.Text);
+            Trace.WriteLine(Password.Password);
+            Trace.WriteLine("-------------------------------");
             List<Event_Managers> agents2 = entities.Event_Managers.ToList();
             foreach (var item in agents)
             {
