@@ -32,7 +32,7 @@ namespace EventForYou
         {
             Entities entities = new Entities();
             List<Users> agents = entities.Users.ToList();
-            Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkaregistr.txt", FileMode.OpenOrCreate)));
+            Trace.Listeners.Add(new TextWriterTraceListener(File.Open("svodkalogin.txt", FileMode.OpenOrCreate)));
             Trace.AutoFlush = true;
             Trace.WriteLine("-------------------------------");
             Trace.WriteLine(Login.Text);
