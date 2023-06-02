@@ -36,7 +36,7 @@
                 <TextBox HorizontalAlignment="Left" Margin="315,558,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1019" BorderThickness="0,0,0,2" Height="70" BorderBrush="Black" FontSize="44"/>
                 <TextBox HorizontalAlignment="Left" Margin="257,649,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1077" BorderThickness="0,0,0,2" Height="70" BorderBrush="Black" FontSize="44"/>
                 <TextBox HorizontalAlignment="Left" Margin="514,740,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="820" BorderThickness="0,0,0,2" Height="70" BorderBrush="Black" FontSize="44"/>
-                <TextBlock HorizontalAlignment="Left" Margin="1101,36,0,0" TextWrapping="Wrap" Text="+7(999)999-99-99" VerticalAlignment="Top" FontSize="24"/>
+                <TextBlock HorizontalAlignment="Left" Margin="1101,36,0,0" TextWrapping="Wrap" Text="+7(999)999-99-99" VerticalAlignment="Top" FontSize="24" Foreground="#FF767676"/>
             </Grid>
         </Border>
     </Viewbox>
