@@ -43,20 +43,9 @@ namespace EventForYou.User
             bool ph = phone.IsMatch(Phone.Text);
             Regex mail = new Regex("[a-z].+[@]{1}[a-z].+[.]{1}");
             bool ml = mail.IsMatch(Email.Text);
-            foreach (var item2 in user)
-            {
-                foreach (var item in registr)
-                {
-                    if (item2.Login == Login.Text || item.E_mail == Email.Text || item.Phone == Phone.Text)
-                    {
-                        MessageBox.Show("Пользователь с такими данными уже существует");
-                        return;
-                    }
-                }
-            }
             if (ml == false || fl == false || fg == false || rg == false || ph == false)
             {
-                MessageBox.Show("Не все данные введены");
+                MessageBox.Show("Не все данные введены верно");
                 return;
             }
             if (rg == false)
@@ -81,6 +70,7 @@ namespace EventForYou.User
                 CategoryWindow cat = new CategoryWindow(id);
                 cat.Show();
                 this.Close();
+                MessageBox.Show("Редактирование данных успешно!");
                 return;
             }
         }

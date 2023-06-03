@@ -49,20 +49,6 @@ namespace EventForYou.LoginAndRegistration
                 bool ph = phone.IsMatch(Phone.Text);
                 Regex mail = new Regex("[a-z].+[@]{1}[a-z].+[.]{1}");
                 bool ml = mail.IsMatch(Email.Text);
-                if (ml == false || fl == false || fg == false || rg == false || ph == false)
-                {
-                    MessageBox.Show("Не все данные введены");
-                }
-                if (Password.Password == Login.Text)
-                {
-                    MessageBox.Show("Пароль и логин не должны совпадать!");
-                    return;
-                }
-                if (rg == false)
-                {
-                    MessageBox.Show("В пароле должны содержаться заглавные и строчные буквы Латинского алфавита, а также цифры! Количество символов в пароле должно быть больше 6!");
-                    return;
-                }
                 foreach (var item2 in user)
                 {
                     foreach (var item in registr)
@@ -73,6 +59,20 @@ namespace EventForYou.LoginAndRegistration
                             return;
                         }
                     }
+                }
+                if (ml == false || fl == false || fg == false || rg == false || ph == false)
+                {
+                    MessageBox.Show("Не все данные введены верно");
+                }
+                if (Password.Password == Login.Text)
+                {
+                    MessageBox.Show("Пароль и логин не должны совпадать!");
+                    return;
+                }
+                if (rg == false)
+                {
+                    MessageBox.Show("В пароле должны содержаться заглавные и строчные буквы Латинского алфавита, а также цифры! Количество символов в пароле должно быть больше 6!");
+                    return;
                 }
                 if (ml && fl && fg && rg && ph)
                 {
